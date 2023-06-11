@@ -15,6 +15,7 @@ def init():
     lms = LMSDiscreteScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear")
 
     model = StableDiffusionPipeline.from_pretrained("jabedbd/illustrations", scheduler=lms, use_auth_token=HF_AUTH_TOKEN)
+    
 
 # Inference is ran for every server call
 # Reference your preloaded global model variable here.
